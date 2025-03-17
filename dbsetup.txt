@@ -1,0 +1,21 @@
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id VARCHAR(50) NOT NULL UNIQUE,
+    surname VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    mi VARCHAR(10),
+    address VARCHAR(255),
+    year VARCHAR(20),
+    course VARCHAR(100),
+    emergency_name VARCHAR(100),
+    emergency_relation VARCHAR(50),
+    emergency_contact VARCHAR(50),
+    emergency_address VARCHAR(255),
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+GRANT SELECT, INSERT, UPDATE ON sis.* TO 'clientuser'@'%' IDENTIFIED BY 'clientpassword';
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON sis.* TO 'adminuser'@'%' IDENTIFIED BY 'adminpassword';
+FLUSH PRIVILEGES;
