@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon "mmd-logo.ico" --add-data "arial.jpg;." --add-data "hcc-logo.png;." --add-data "mmd-logo.png;." admin_dashboard.py
